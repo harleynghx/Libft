@@ -6,19 +6,19 @@
 /*   By: hang <hang@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 22:30:59 by hang              #+#    #+#             */
-/*   Updated: 2023/11/20 01:23:22 by hang             ###   ########.fr       */
+/*   Updated: 2023/11/18 22:43:56 by hang             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    while(lst)
-    {
-        if(lst -> next == NULL)
-            return(lst);
-        lst = lst -> next;
-    }
-    return(NULL);
+	while (lst)
+	{
+		if (lst->next == NULL)
+			return (lst);
+		lst = lst->next;
+	}
+	return (NULL);
 }

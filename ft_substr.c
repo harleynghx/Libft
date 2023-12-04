@@ -12,30 +12,35 @@
 
 #include "libft.h"
 
+static size_t	ft_lencheck(char const *s, unsigned int start, size_t len)
+{
+	if (((size_t)ft_strlen(s) - start) < len)
+	{
+		return (((size_t)ft_strlen(s) - start));
+	}
+	else
+		return (len);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (!s)
-		return (0);
-	if ((int)start >= ft_strlen(s))
-	{
-		char *str2;
-		str2 = malloc(1);
-		str2[0] = '\0';
-		return (str2);
-	}
-	size_t i;
-	size_t bytes;
-	char *str;
+	char	*subs;
+	size_t	i;
 
-	i = 0;
-	bytes = 0;
-	while (bytes < len && s[start + bytes])
-		bytes++;
-	str = malloc(sizeof(char) * (bytes + 1));
-	if (!str)
+	if (!s)
 		return (NULL);
+	if (start >= (size_t)ft_strlen(s))
+		return (ft_strdup(""));
+	subs = (char *)malloc(sizeof(char) * (ft_lencheck(s, start, len) + 1));
+	if (!subs)
+		return (NULL);
+	i = 0;
 	while (s[start] && i < len)
-		str[i++] = s[start++];
-	str[i] = '\0';
-	return (str);
+	{
+		subs[i] = s[start];
+		start++;
+		i++;
+	}
+	subs[i] = '\0';
+	return (subs);
 }

@@ -14,10 +14,10 @@
 
 void	*ft_memmove(void *s1, const void *s2, size_t n)
 {
-	if(s1 == NULL && s2 == NULL)
-		return (0);
 	size_t	len;
 
+	if (s1 == NULL && s2 == NULL)
+		return (0);
 	len = 0;
 	if (s2 < s1)
 	{

@@ -14,11 +14,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	if(size > 0 && count > UINT_MAX / size)
-		return (0);
 	size_t	bytes;
 	void	*p;
 
+	if (size > 0 && count > UINT_MAX / size)
+		return (0);
 	bytes = count * size;
 	p = malloc(bytes);
 	if (!p)
@@ -28,5 +28,5 @@ void	*ft_calloc(size_t count, size_t size)
 	return (p);
 }
 
-//check if arguments is not zero
-//check if count * size is not too large for malloc
+// check if arguments is not zero
+// check if count * size is not too large for malloc

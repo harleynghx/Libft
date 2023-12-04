@@ -14,13 +14,13 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if(s1 == NULL || s2 == NULL)
-		return(0);
-	char *str;
-	int counter;
-	int i;
-	int bytes;
+	char	*str;
+	int		counter;
+	int		i;
+	int		bytes;
 
+	if (s1 == NULL || s2 == NULL)
+		return (0);
 	counter = 0;
 	bytes = 0;
 	i = 0;
@@ -31,7 +31,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (s1[counter])
 		str[i++] = s1[counter++];
 	counter = 0;
-	while(s2[counter])
+	while (s2[counter])
 		str[i++] = s2[counter++];
 	str[i] = '\0';
 	return (str);
