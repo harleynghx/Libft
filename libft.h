@@ -6,7 +6,7 @@
 /*   By: hang <hang@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 02:32:56 by hang              #+#    #+#             */
-/*   Updated: 2024/07/24 13:46:10 by hang             ###   ########.fr       */
+/*   Updated: 2024/07/24 13:54:35 by hang             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 
-
 void				printfputchar(int c, int *length);
 void				printfstring(char *str, int *length);
 void				printfpointer(uintptr_t ptr, int *length);
@@ -70,14 +69,10 @@ void				printfinteger(long numbers, int *length);
 void				printfhexadecimal(unsigned long nb, int *length, char xorX);
 int					ft_printf(const char *str, ...);
 
-
-
 char				*get_next_line(int fd);
 char				*cleanline(char *fd_str);
 char				*delete_upto_nl(char *fd_str);
 char				*readnjoin(int fd, char *fd_str);
-
-
 
 char				*ft_itoa(int n);
 char				*ft_strdup(const char *src);
